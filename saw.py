@@ -2,14 +2,13 @@ import streamlit as st
 import pandas as pd
 from pymongo import MongoClient
 
-#buat koneksi ke database !!
 
 # Mengambil data dari database
 data = list(collection.find()) #konversi ke list
 df = pd.DataFrame(data) #buat df
 
 # Menghapus kolom _id
-df.drop(columns=["_id"], inplace=True, errors="ignore")
+df.drop(columns=["id"], inplace=True, errors="ignore")
 #lakukan perubahan langsung tanpa membuat salinan baru
 
 def show_table():
