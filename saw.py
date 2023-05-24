@@ -3,9 +3,6 @@ import pandas as pd
 from pymongo import MongoClient
 
 # Koneksi ke db
-client = MongoClient("mongodb://localhost:27017")
-db = client["mydatabase"]
-collection = db["spkdss"]
 
 # Mengambil data dari database
 data = list(collection.find()) #konversi ke list
