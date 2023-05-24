@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 from pymongo import MongoClient
 
-# Koneksi ke db
 
 # Mengambil data dari database
 data = list(collection.find()) #konversi ke list
